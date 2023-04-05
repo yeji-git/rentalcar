@@ -28,9 +28,8 @@
         </div>
         <div>
             <ul>
-                <li><a href="#"><i class="fa-light fa-user" style="color: #000000;"></i></a></li>
-                <li><a href="#"><i class="fa-light fa-bars" style="color: #000000;"></i></a></li>
-                <li><a href="#"><i class="fa-light fa-globe" style="color: #000000;"></i></li>
+                <li><a href="login.jsp">로그인</a></li>
+                <li><a href="join.jsp">회원가입</a></li>
             </ul>
         </div>
     </header>
