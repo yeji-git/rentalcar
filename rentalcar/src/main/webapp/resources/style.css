@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+body {
+    display: grid;
+    grid-template-rows: 100px auto 100px;
+    height: 100vh;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menu ul, #side ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    gap: 5px;
+}
+
+li a:hover {
+    color: #ff3f4c;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    width: fit-content;
+}
