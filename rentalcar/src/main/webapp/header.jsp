@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>롯데렌터카</title>
 <link rel="shortcut icon" href="resources/images/favicon.ico">
+<link rel="stylesheet" href="resources/reset.css">
 </head>
 <body>
     <header>
