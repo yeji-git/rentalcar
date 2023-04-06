@@ -47,6 +47,6 @@
             </div>
         </form>
     </section>
-    <script type="text/javascript" src="resources/validation.js"></script>
+    <script type="text/javascript" src="../resources/validation.js"></script>
 </body>
 </html>

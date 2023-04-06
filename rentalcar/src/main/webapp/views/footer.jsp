@@ -6,7 +6,7 @@
 </head>
 <body>
 	<footer>
-		<img src="resources/images/logo-footer.png" alt="롯데렌터카 로고 이미지">
+		<img src="../resources/images/logo-footer.png" alt="롯데렌터카 로고 이미지">
 		<ul>
 			<li></li>
 		</ul>

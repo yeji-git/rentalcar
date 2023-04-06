@@ -5,15 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>롯데렌터카</title>
-<link rel="shortcut icon" href="resources/images/favicon.ico">
-<link rel="stylesheet" href="resources/reset.css">
-<link rel="stylesheet" href="resources/style.css">
+<link rel="shortcut icon" href="../resources/images/favicon.ico">
+<link rel="stylesheet" href="../resources/reset.css">
+<link rel="stylesheet" href="../resources/style.css">
 </head>
 <body>
     <header>
         <div id="logo">
             <h1>
-                <a href="index.jsp"><img src="resources/images/logo-header.png" alt="롯데렌터카 로고 이미지"></a>
+                <a href="../index.jsp"><img src="../resources/images/logo-header.png" alt="롯데렌터카 로고 이미지"></a>
             </h1>
         </div>
         <div id="menu">
