@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="header"></jsp:include>
 </head>
 <body>
 	<form method="POST" action="loginPro.jsp">
@@ -14,5 +14,6 @@
 		<input type="password" name="password" placeholder="password">
 		<input type="button" value="로그인" onclick="">
 	</form>
+	<jsp:include page="footer"></jsp:include>
 </body>
 </html>

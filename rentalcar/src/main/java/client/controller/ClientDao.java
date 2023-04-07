@@ -5,8 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import com.mysql.cj.protocol.Resultset;
-
 import client.Client;
 import client.ClientRequestDto;
 import util.DBManager;
@@ -78,7 +76,6 @@ public class ClientDao {
 				DBManager.close(conn, pstmt, rs);
 			}
 		}
-		
 		return list;
 	}
 	
@@ -102,7 +99,4 @@ public class ClientDao {
 			}
 		}
 	}
-	
-	// D
-	
 }

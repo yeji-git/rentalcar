@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="header"></jsp:include>
 </head>
 <body>
 	<%
@@ -19,7 +19,8 @@
 	String address = request.getParameter("address");
 	%>
     <section>
-        <form action="POST" action="joinPro.jsp">
+        <form action="../service">
+       		<input type="hidden" name="command" value="join">
             <table>
                 <tr>
                     <td>아이디</td>
@@ -48,5 +49,6 @@
         </form>
     </section>
     <script type="text/javascript" src="../resources/validation.js"></script>
+    <jsp:include page="footer"></jsp:include>
 </body>
 </html>

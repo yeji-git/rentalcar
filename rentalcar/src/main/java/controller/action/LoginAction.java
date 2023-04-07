@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import client.ClientRequestDto;
 import client.controller.ClientDao;
 
-public class JoinAction implements Action {
+public class LoginAction implements Action {
 
 	@Override
 	public void excute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

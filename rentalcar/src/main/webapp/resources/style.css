@@ -18,7 +18,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-around;
-    gap: 5px;
+    gap: 50px;
 }
 
 li a:hover {
@@ -33,4 +33,51 @@ form {
     width: fit-content;
     margin: auto;
     width: fit-content;
+}
+
+/* index */
+#visual {
+    display: flex;
+    justify-content: center;
+}
+
+/* join */
+table {
+	margin: 20px auto;
+	border: 2px solid #ff3f4c;
+}
+
+td > input {
+	border: none;
+}
+
+th, td {
+	padding: 5px 10px;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	margin: auto;
+}
+
+input[type="button"] {
+	padding: 5px 10px;
+	text-align: center;
+	width: 100px;
+	height: 50px;
+	font-size: 20px;
+	outline: none;
+	border: 0;
+	border-radius: 15px;
+	background-color: #ff3f4c;
+	color: white;
+}
+
+footer {
+	margin-top: 50px;
 }

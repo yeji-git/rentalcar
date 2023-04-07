@@ -1,6 +1,7 @@
 package controller;
 
 import controller.action.Action;
+import controller.action.JoinAction;
 
 public class ActionFactory {
 
@@ -14,6 +15,15 @@ public class ActionFactory {
 	
 	public Action getAction(String command) {
 		Action action = null;
+		
+		if (command.equals("join"))
+			action = new JoinAction();
+//		else if(command.equals("login"))
+//			action = new LoginAction();
+//		else if(command.equals("logout"))
+//			action = new LogoutAction();
+//		else if(command.equals("writeBoard"))
+//			action = new WriteBoardAction();
 		
 		return action;
 	}

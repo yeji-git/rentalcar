@@ -13,7 +13,7 @@
     <header>
         <div id="logo">
             <h1>
-                <a href="../index.jsp"><img src="../resources/images/logo-header.png" alt="롯데렌터카 로고 이미지"></a>
+                <a href="index"><img src="../resources/images/logo-header.png" alt="롯데렌터카 로고 이미지"></a>
             </h1>
         </div>
         <div id="menu">
@@ -30,8 +30,8 @@
         <div id="side">
         	<nav>
 	            <ul>
-	                <li><a href="login.jsp">로그인</a></li>
-	                <li><a href="join.jsp">회원가입</a></li>
+	                <li><a href="login">로그인</a></li>
+	                <li><a href="join">회원가입</a></li>
 	            </ul>
             </nav>
         </div>

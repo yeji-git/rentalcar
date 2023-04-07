@@ -15,3 +15,8 @@ a {
 ul {
 	list-style: none;
 }
+
+body {
+	width: 1400px;
+	margin: 0 auto;
+}
