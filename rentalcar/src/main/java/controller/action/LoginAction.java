@@ -5,8 +5,9 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import client.ClientRequestDto;
+import client.Client;
 import client.controller.ClientDao;
 
 public class LoginAction implements Action {
@@ -15,14 +16,18 @@ public class LoginAction implements Action {
 	public void excute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String client_id = request.getParameter("client_id");
 		String password = request.getParameter("password");
-		String name = request.getParameter("name");
-		String phone = request.getParameter("phone");
-		String address = request.getParameter("address");
-
-		ClientRequestDto clientDto = new ClientRequestDto(client_id, password, name, phone, address);
 
 		ClientDao clientDao = ClientDao.getInstance();
-		clientDao.createClient(clientDto);		
+		Client client = clientDao.getClientById(client_id);
+		
+		if (client != null && password.equals(client.getPassword())) {
+			HttpSession session = request.getSession();
+			session.setAttribute("log", client);
+			response.sendRedirect("/");
+		}
+		else {
+			response.sendRedirect("login");
+		}
 	}
 
 }

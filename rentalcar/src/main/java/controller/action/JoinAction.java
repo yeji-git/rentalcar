@@ -23,6 +23,8 @@ public class JoinAction implements Action {
 
 		ClientDao clientDao = ClientDao.getInstance();
 		clientDao.createClient(clientDto);		
+		
+		response.sendRedirect("/");
 	}
 
 }

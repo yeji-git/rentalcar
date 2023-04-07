@@ -3,6 +3,7 @@ package client.controller;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import client.Client;
@@ -77,6 +78,34 @@ public class ClientDao {
 			}
 		}
 		return list;
+	}
+	
+	public Client getClientById(String client_id) {
+		Client client = null;
+		
+		this.conn = DBManager.getConnection();
+		if (this.conn != null) {
+			try {
+				String sql = "SELECT * FROM client WHERE client_id=?";
+				this.pstmt = conn.prepareStatement(sql);
+				this.pstmt.setString(1, client_id);
+				this.rs = this.pstmt.executeQuery();
+				while (this.rs.next()) {
+//					String client_id = this.rs.getString(1);
+					String password = this.rs.getString(2);
+					String name = this.rs.getString(3);
+					String phone = this.rs.getString(4);
+					String address = this.rs.getString(5);
+					
+					client = new Client(client_id, password, name, phone, address);
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(conn, pstmt, rs);
+			}
+		}
+		return client;
 	}
 	
 	// U

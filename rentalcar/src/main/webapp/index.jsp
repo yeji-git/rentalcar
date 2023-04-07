@@ -15,12 +15,6 @@
 			</div>
 		</article>
 		<article>
-			<h3>서비스 바로가기</h3>
-			<ul>
-				<li><a href="#">단기렌트</a></li>
-				<li><a href="#">장기렌트</a></li>
-				<li><a href="#">커뮤니티</a></li>
-			</ul>
 		</article>
 	</section>
 	<jsp:include page="footer"></jsp:include>

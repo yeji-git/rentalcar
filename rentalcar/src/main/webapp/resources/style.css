@@ -42,21 +42,25 @@ form {
 }
 
 /* join */
-table {
+#join h2 {
+	text-align: center;
+}
+
+#join table {
 	margin: 20px auto;
 	border: 2px solid #ff3f4c;
 }
 
-td > input {
+#join td > input {
 	border: none;
 }
 
-th, td {
+#join th, td {
 	padding: 5px 10px;
 	text-align: center;
 }
 
-form {
+#join form {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -65,7 +69,7 @@ form {
 	margin: auto;
 }
 
-input[type="button"] {
+#join input[type="button"] {
 	padding: 5px 10px;
 	text-align: center;
 	width: 100px;

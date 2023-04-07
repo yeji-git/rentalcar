@@ -18,8 +18,9 @@
 	String phone = request.getParameter("phone");
 	String address = request.getParameter("address");
 	%>
-    <section>
-        <form action="../service">
+    <section id="join">
+        <h2>롯데렌터카 회원가입</h2>
+        <form method="POST" action="../service">
        		<input type="hidden" name="command" value="join">
             <table>
                 <tr>

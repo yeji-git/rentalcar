@@ -61,13 +61,13 @@
   </servlet-mapping>
   
   <servlet>
-  	<servlet-name>index</servlet-name>
-  	<jsp-file>/views/index.jsp</jsp-file>
+  	<servlet-name>mypage</servlet-name>
+  	<jsp-file>/views/mypage.jsp</jsp-file>
   </servlet>
   
   <servlet-mapping>
-  	<servlet-name>index</servlet-name>
-  	<url-pattern>/index</url-pattern>
+  	<servlet-name>mypage</servlet-name>
+  	<url-pattern>/mypage</url-pattern>
   </servlet-mapping>
 
 </web-app>

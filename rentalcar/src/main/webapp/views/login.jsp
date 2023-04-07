@@ -9,10 +9,11 @@
 	<jsp:include page="header"></jsp:include>
 </head>
 <body>
-	<form method="POST" action="loginPro.jsp">
-		<input type="text" name="id" placeholder="id">
+	<form method="POST" action="../service">
+		<input type="hidden" name="command" value="login">
+		<input type="text" name="client_id" placeholder="id">
 		<input type="password" name="password" placeholder="password">
-		<input type="button" value="로그인" onclick="">
+		<input type="submit" value="로그인">
 	</form>
 	<jsp:include page="footer"></jsp:include>
 </body>
