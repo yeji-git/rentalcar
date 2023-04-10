@@ -24,10 +24,9 @@
 		<div id="menu">
 			<nav>
 				<ul>
-					<li><a href="#">단기렌터카</a></li>
-					<li><a href="#">신차 장기렌터카</a></li>
-					<li><a href="#">CAR뮤니티</a></li>
-					<li><a href="#">공지사항</a></li>
+					<li><a href="list">렌터카</a></li>
+					<li><a href="community">CAR뮤니티</a></li>
+					<li><a href="notice">공지사항</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -35,16 +34,9 @@
 			<nav>
 				<ul>
 					<%if (log != null) {%>
-					<li>
-						<form method="POST" action="loginPro.jsp">
-							<a href="/"> <input type="hidden" name="command"
-								value="logout"> 로그아웃
-							</a>
-						</form>
-					</li>
+					<li><a href="../service?command=logout">로그아웃</a></li>
 					<li><a href="mypage">마이페이지</a></li>
-					<%}
-	            		else {%>
+					<%} else {%>
 					<li><a href="login">로그인</a></li>
 					<li><a href="join">회원가입</a></li>
 					<%}%>

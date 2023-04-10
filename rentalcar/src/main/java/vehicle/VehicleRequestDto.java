@@ -7,13 +7,15 @@ public class VehicleRequestDto {
 	private String company;
 	private String type;
 	private String period;
+	private int money;
 	
-	public VehicleRequestDto(String vehicle_number, int venue_id, String company, String type, String period) {
+	public VehicleRequestDto(String vehicle_number, int venue_id, String company, String type, String period, int money) {
 		this.vehicle_number = vehicle_number;
 		this.venue_id = venue_id;
 		this.company = company;
 		this.type = type;
 		this.period = period;
+		this.money = money;
 	}
 
 	public String getVehicle_number() {
@@ -54,6 +56,14 @@ public class VehicleRequestDto {
 
 	public void setPeriod(String period) {
 		this.period = period;
+	}
+
+	public int getMoney() {
+		return money;
+	}
+
+	public void setMoney(int money) {
+		this.money = money;
 	}
 	
 }

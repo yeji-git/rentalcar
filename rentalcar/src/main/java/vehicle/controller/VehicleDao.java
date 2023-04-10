@@ -30,7 +30,7 @@ public class VehicleDao {
 		
 		if (this.conn != null) {
 			String sql = "INSERT INTO vehicle VLUES";
-			sql += "(?,?,?,?,?)";
+			sql += "(?,?,?,?,?,?)";
 			
 			try {
 				this.pstmt = this.conn.prepareStatement(sql);
@@ -39,6 +39,7 @@ public class VehicleDao {
 				this.pstmt.setString(3, vehicle.getCompany());
 				this.pstmt.setString(4, vehicle.getType());
 				this.pstmt.setString(5, vehicle.getPeriod());
+				this.pstmt.setInt(6, vehicle.getMoney());
 				
 				this.pstmt.execute();
 			} catch (SQLException e) {
@@ -67,8 +68,9 @@ public class VehicleDao {
 					String company = this.rs.getString(3);
 					String type = this.rs.getString(4);
 					String period = this.rs.getString(5);
+					int money = this.rs.getInt(6);
 					
-					Vehicle vehicle = new Vehicle(vehicle_number, venue_id, company, type, period);
+					Vehicle vehicle = new Vehicle(vehicle_number, venue_id, company, type, period, money);
 					list.add(vehicle);
 				}
 			} catch (Exception e) {
@@ -81,12 +83,41 @@ public class VehicleDao {
 		return list;
 	}
 	
+	public Vehicle getVehicleByNumber(String vehicle_number) {
+		Vehicle vehicle = null;
+		
+		this.conn = DBManager.getConnection();
+		
+		if (this.conn != null) {
+			String sql = "SELECT * FROM vehicle WHERE vehicle_number=?";
+			try {
+				this.pstmt = conn.prepareStatement(sql);
+				this.pstmt.setString(1, vehicle_number);
+				this.rs = this.pstmt.executeQuery();
+				while (this.rs.next()) {
+					int venue_id = this.rs.getInt(2);
+					String company = this.rs.getString(3);
+					String type = this.rs.getString(4);
+					String period = this.rs.getString(5);
+					int money = this.rs.getInt(6);
+					
+					vehicle = new Vehicle(vehicle_number, venue_id, company, type, period, money);
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				DBManager.close(conn, pstmt, rs);
+			}
+		}
+		return vehicle;
+	}
+	
 	// U
 	public void updateVehicle(VehicleRequestDto vehicleDto) {
 		this.conn = DBManager.getConnection();
 		
 		if (conn != null) {
-			String sql = "UPDATE vehicle SET vehicle_number=?, venue_id=?, company=?, type=?, period=?";
+			String sql = "UPDATE vehicle SET vehicle_number=?, venue_id=?, company=?, type=?, period=?, money=?";
 			
 			try {
 				this.pstmt = this.conn.prepareStatement(sql);
@@ -95,6 +126,8 @@ public class VehicleDao {
 				this.pstmt.setString(3, vehicleDto.getCompany());
 				this.pstmt.setString(4, vehicleDto.getType());
 				this.pstmt.setString(5, vehicleDto.getPeriod());
+				this.pstmt.setInt(6, vehicleDto.getMoney());
+				
 			} catch (SQLException e) {
 				e.printStackTrace();
 			} finally {

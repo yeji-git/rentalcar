@@ -69,5 +69,45 @@
   	<servlet-name>mypage</servlet-name>
   	<url-pattern>/mypage</url-pattern>
   </servlet-mapping>
-
+  
+  <servlet>
+  	<servlet-name>list</servlet-name>
+  	<jsp-file>/views/list.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>list</servlet-name>
+  	<url-pattern>/list</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>notice</servlet-name>
+  	<jsp-file>/views/notice.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>notice</servlet-name>
+  	<url-pattern>/notice</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+  	<servlet-name>community</servlet-name>
+  	<jsp-file>/views/community.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>community</servlet-name>
+  	<url-pattern>/community</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+  	<servlet-name>booking</servlet-name>
+  	<jsp-file>/views/booking.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>booking</servlet-name>
+  	<url-pattern>/booking</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

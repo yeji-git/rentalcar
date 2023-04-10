@@ -11,8 +11,7 @@ public class LogoutAction implements Action {
 
 	@Override
 	public void excute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		session.removeAttribute("log");
+		request.getSession().removeAttribute("log");
 		response.sendRedirect("/");
 	}
 
